@@ -46,12 +46,15 @@ abstract class Stabilis_Core_Helper_Abstract extends Mage_Core_Helper_Abstract {
     protected $_data;
 
     /**
-     * Wrapper for Mage::logException whose functionality can be optionally disabled
+     * Wrapper for Mage::logException, although this behavior can be changed in derived classes.
      *
-     * @param Exception $e
+     * @param Exception $e the exception to log
+     * 
+     * @return \Stabilis_Core_Helper_Abstract $this
      */
     public function logException(Exception $e) {
         Mage::logException($e);
+        return $this;
     }
 
     /**
@@ -76,7 +79,6 @@ abstract class Stabilis_Core_Helper_Abstract extends Mage_Core_Helper_Abstract {
     public final function __construct() {
         $this->_data = new Varien_Object(func_get_args());
         Mage::dispatchEvent(self::EVENT_PRE_PSEUDO_CONSTRUCTOR, array('helper' => $this));
-        $result = null;
         try {
             $result = $this->_construct();
         } catch(Exception $e) {
@@ -133,6 +135,5 @@ abstract class Stabilis_Core_Helper_Abstract extends Mage_Core_Helper_Abstract {
      */
     public function getData($key = '', $index = null) {
         return $this->_data->getData($key, $index);
-    }
-
+    }    
 }

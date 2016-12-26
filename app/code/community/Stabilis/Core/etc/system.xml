@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <tabs>
+        <stabilis translate="label" module="stabilis">
+            <label>Stabilis</label>
+            <sort_order>100000</sort_order>
+        </stabilis>
+    </tabs>
+    <sections>
+        <stabilis_core translate="label" module="stabilis">
+            <class>separator-top</class>
+            <label>Stabilis Core</label>
+            <tab>stabilis</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>300</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <form_renderer translate="label">
+                    <label>Adminhtml Form Renderer</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1000</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <admin_user_format translate="label comment tooltip">
+                            <label>Admin User Display Format</label>
+                            <comment><![CDATA[This expression is passed as the <em>format</em> argument to a sprintf invocation with the following string args: first name, last name, email.<br />For more information, please refer to the <a href="">sprintf documentation</a>.]]></comment>
+                            <tooltip><![CDATA[For example, a <em>format</em> of <code>"%s %s <%s>"</code> will result in <code>Firstname Lastname &lt;Email Address&gt;</code>]]></tooltip>
+                            <sort_order>1000</sort_order>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </admin_user_format>
+                    </fields>
+                </form_renderer>
+                <grid_renderer translate="label">
+                    <label>Adminhtml Grid Renderer</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>2000</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <admin_user_format translate="label comment tooltip">
+                            <label>Admin User Display Format</label>
+                            <comment><![CDATA[This expression is passed as the <em>format</em> argument to a sprintf invocation with the following string args: first name, last name, email.<br />For more information, please refer to the <a href="">sprintf documentation</a>.]]></comment>
+                            <tooltip><![CDATA[For example, a <em>format</em> of <code>"%s %s <%s>"</code> will result in <code>Firstname Lastname &lt;Email Address&gt;</code>]]></tooltip>
+                            <sort_order>1000</sort_order>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </admin_user_format>
+                    </fields>
+                </grid_renderer>
+            </groups>
+        </stabilis_core>
+    </sections>
+</config>

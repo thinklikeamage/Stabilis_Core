@@ -31,11 +31,40 @@
             <version>1.0.0.0</version>
         </Stabilis_Core>
     </modules>
+    <adminhtml>
+        <layout>
+            <updates>
+                <stabilis>
+                    <file>stabilis_core.xml</file>
+                </stabilis>
+            </updates>
+        </layout>
+    </adminhtml>
+    <default>
+        <stabilis_core>
+            <form_renderer>
+                <admin_user_format><![CDATA[%s %s <%s>]]></admin_user_format>
+            </form_renderer>
+            <grid_renderer>
+                <admin_user_format><![CDATA[%s %s <%s>]]></admin_user_format>
+            </grid_renderer>
+        </stabilis_core>
+    </default>
     <global>
+        <blocks>
+            <stabilis>
+                <class>Stabilis_Core_Block</class>
+            </stabilis>
+        </blocks>
         <helpers>
             <stabilis>
                 <class>Stabilis_Core_Helper</class>
             </stabilis>
         </helpers>
+        <models>
+            <stabilis>
+                <class>Stabilis_Core_Model</class>
+            </stabilis>
+        </models>
     </global>
 </config>

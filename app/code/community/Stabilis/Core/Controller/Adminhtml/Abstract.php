@@ -60,4 +60,15 @@ abstract class Stabilis_Core_Controller_Adminhtml_Abstract extends Mage_Adminhtm
         Mage::dispatchEvent(self::STABILIS_CONTROLLER_IS_ALLOWED_AFTER, array('controller' => $this, 'action' => $action, 'allowed' => $allowed));
         return $allowed;
     }
+    
+    /**
+     * Is the current user allowed to use the provided action?
+     * 
+     * @param string $action
+     * 
+     * @return bool
+     */
+    public function isAllowed($action) {
+        return Mage::getSingleton('admin/session')->isAllowed($this->_getAclBasePath() . "/{$action}");
+    }
 }
