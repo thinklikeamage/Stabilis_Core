@@ -14,7 +14,14 @@ if(Validation) {
                  default:
                      return /^[+-]?(\d*\.)?\d+(%|ch|cm|ex|in|mm|px|pc|pt|r?em|vh|vmax|vmin|vw)$/i.test(value);
              }
-         }]
+         }
+        ],
+        ['validate-hex32',
+         'Please enter a valid 32 character long hexadecial string',
+         function(value) {
+            return /^[A-Fa-f0-9]{32}$/.test(value);
+         }
+        ]
          ///...more validators to follow
     ]);
 }
